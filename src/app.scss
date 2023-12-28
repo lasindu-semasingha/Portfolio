@@ -1,0 +1,60 @@
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    padding: 1rem;
+    max-height: 220px;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body{
+    background: linear-gradient(100deg, #0c0c1d, #111132);
+    color: lightgray;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.course{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 730px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: 1366px){
+        @content;
+    }
+}
